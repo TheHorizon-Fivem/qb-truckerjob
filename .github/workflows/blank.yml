@@ -19,16 +19,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout HEAD
-      - uses: actions/checkout@v3
-        with:
-          ref: main
+    - name: Checkout HEAD
+    - uses: actions/checkout@v3
+      with:
+        ref: main
 
-      - name: Pull upstream changes
-        id: sync
-        uses: TheHorizon-Fivem/qb-truckerjob
-        with:
-          upstream_repository: qbcore-framework/qb-truckerjob
-          upstream_branch: main
-      - name: Timestamp
-        run: date
+    - name: Pull upstream changes
+      id: sync
+      uses: TheHorizon-Fivem/qb-truckerjob
+      with:
+        upstream_repository: qbcore-framework/qb-truckerjob
+        upstream_branch: main
+    - name: Timestamp
+      run: date
